@@ -1,0 +1,153 @@
+{
+	"info": {
+		"_postman_id": "d9b9a2b9-da60-46b3-9d84-a9d0cf65d151",
+		"name": "freshdesk",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "https://newaccount1620396153457.freshdesk.com/api/v2/tickets?requester_id=80075298592",
+			"id": "e7ceacaa-f324-4a08-9ce7-a737f74f9fdd",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "X",
+						"username": "jpJkRHBe2iSYo79JCvR"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"description\": \"Posting a ticket from postman\",\r\n  \"subject\": \"Creating a ticket via API\",\r\n\"priority\": 1,\r\n\r\n\"requester_id\": 80054131503,\r\n\"name\": \"Cal\",\r\n\"email\": \"cal@biteymcchomp.com\",\r\n\"status\":2,\r\n\"phone\": null\r\n\r\n\r\n\r\n\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://newaccount1620396153457.freshdesk.com/api/v2//tickets/requesterid= ",
+					"protocol": "https",
+					"host": [
+						"newaccount1620396153457",
+						"freshdesk",
+						"com"
+					],
+					"path": [
+						"",
+						"api",
+						"v2",
+						"",
+						"tickets",
+						"requesterid= "
+					],
+					"query": [
+						{
+							"key": "status",
+							"value": "1",
+							"description": "Open",
+							"disabled": true
+						},
+						{
+							"key": "description",
+							"value": "\"My monitor is broken\"",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "include",
+							"value": "description",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "include",
+							"value": "requester",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "priority",
+							"value": "1",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"id": "bf230134-4853-4cc4-aa45-740260ce6b9a",
+					"name": "https://newaccount1620396153457.freshdesk.com//api/v2/tickets/105/conversations",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"description\": \"Posting a ticket from postman\",\r\n  \"subject\": \"Creating a ticket via API\",\r\n\"priority\": 1,\r\n\r\n\"requester_id\": 80054131503,\r\n\"name\": \"Cal\",\r\n\"email\": \"cal@biteymcchomp.com\",\r\n\"status\":2,\r\n\"phone\": null\r\n\r\n\r\n\r\n\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://newaccount1620396153457.freshdesk.com/api/v2/tickets?requester_id=80075298592",
+							"protocol": "https",
+							"host": [
+								"newaccount1620396153457",
+								"freshdesk",
+								"com"
+							],
+							"path": [
+								"api",
+								"v2",
+								"tickets"
+							],
+							"query": [
+								{
+									"key": "status",
+									"value": "1",
+									"description": "Open",
+									"disabled": true
+								},
+								{
+									"key": "description",
+									"value": "\"My monitor is broken\"",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "include",
+									"value": "description",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "include",
+									"value": "requester",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "requester_id",
+									"value": "80075298592"
+								}
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"responseTime": null,
+					"body": null
+				}
+			]
+		}
+	]
+}
