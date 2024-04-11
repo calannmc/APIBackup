@@ -1,0 +1,239 @@
+{
+	"info": {
+		"_postman_id": "19f3650f-148a-48b7-8b52-84365e3c43fe",
+		"name": "Cherwell",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Sample endpoint: Returns details about a particular user",
+			"id": "7c6abacf-e048-44c2-a891-f6069ce1bb00",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "{{baseUrl}}/user?id=13145878",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"user"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "13145878",
+							"description": "(Required) ID of the user"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"id": "fc110d74-091b-4f28-8a47-361a1ae2bd24",
+					"name": "Sample response: Details about a user by ID",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"description": "Added as a part of security scheme: basic",
+								"key": "Authorization",
+								"value": "Basic <credentials>"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/user?id=13145878",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"user"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "13145878"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"disabled": false,
+							"description": "A link to the next page of responses",
+							"key": "x-next",
+							"value": "sint"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"responseTime": null,
+					"body": "{\n  \"id\": -12110284,\n  \"name\": \"ex Excepteur\",\n  \"tag\": \"deserunt officia dolor occaecat\"\n}"
+				},
+				{
+					"id": "402f7601-6255-4d82-8cf5-469065d3a336",
+					"name": "Unexpected error",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"description": "Added as a part of security scheme: basic",
+								"key": "Authorization",
+								"value": "Basic <credentials>"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/user?id=13145878",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"user"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "13145878"
+								}
+							]
+						}
+					},
+					"status": "Internal Server Error",
+					"code": 500,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"responseTime": null,
+					"body": "{\n  \"code\": 27629900,\n  \"message\": \"consectetur voluptate sunt\"\n}"
+				},
+				{
+					"id": "296347f2-9e18-4206-be43-e174da2051de",
+					"name": "Sample endpoint: Returns details about a particular user",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": "https://biomni.experiencecherwell.com/CherwellApi/api/v1/getbusinessonbjecttemplate"
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/html"
+						},
+						{
+							"key": "Server",
+							"value": "Microsoft-IIS/10.0"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "ASP.NET"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, POST, OPTIONS, PUT, DELETE"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Content-Type, Accept"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 19 Jul 2022 09:21:20 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1245"
+						}
+					],
+					"cookie": [],
+					"responseTime": null,
+					"body": "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">\n<html xmlns=\"http://www.w3.org/1999/xhtml\">\n    <head>\n        <meta http-equiv=\"Content-Type\" content=\"text/html; charset=iso-8859-1\"/>\n        <title>404 - File or directory not found.</title>\n        <style type=\"text/css\">\n            <!--\r\nbody{margin:0;font-size:.7em;font-family:Verdana, Arial, Helvetica, sans-serif;background:#EEEEEE;}\r\nfieldset{padding:0 15px 10px 15px;} \r\nh1{font-size:2.4em;margin:0;color:#FFF;}\r\nh2{font-size:1.7em;margin:0;color:#CC0000;} \r\nh3{font-size:1.2em;margin:10px 0 0 0;color:#000000;} \r\n#header{width:96%;margin:0 0 0 0;padding:6px 2% 6px 2%;font-family:\"trebuchet MS\", Verdana, sans-serif;color:#FFF;\r\nbackground-color:#555555;}\r\n#content{margin:0 0 0 2%;position:relative;}\r\n.content-container{background:#FFF;width:96%;margin-top:8px;padding:10px;position:relative;}\r\n-->\r\n\n        </style>\n    </head>\n    <body>\n        <div id=\"header\">\n            <h1>Server Error</h1>\n        </div>\n        <div id=\"content\">\n            <div class=\"content-container\">\n                <fieldset>\n                    <h2>404 - File or directory not found.</h2>\n                    <h3>The resource you are looking for might have been removed, had its name changed, or is temporarily unavailable.</h3>\n                </fieldset>\n            </div>\n        </div>\n    </body>\n</html>"
+				}
+			]
+		},
+		{
+			"name": "https://biomni.experiencecherwell.com/CherwellAPI/api/V1/getsearchitems/association/103193",
+			"id": "b80bbf71-ae9d-42e6-9fb6-a3c45a32203a",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiQmlvbW5pYXBpIiwiY2xpZW50X2lkIjoiNTFjNTI0MzYtNWQ3OC00ZmZjLTg5MzEtYzM3NzY2OWU5Nzk1IiwiaWRlbnQiOiJ7XCJhcHBsaWNhdGlvbl90eXBlXCI6XCJCcm93c2VyQ2xpZW50XCIsXCJhdXRoZW50aWNhdGlvbl90eXBlXCI6XCJUcmVidWNoZXRcIixcInVzZXJfaWRcIjpcIkJpb21uaWFwaVwiLFwic2VjX2dycFwiOlwiOTQ4N2QyZWQwOTQyNzM4NmQ5ZGVlZTRiYTU5ZTliMTUyMWQ2ZWVjZDJlXCIsXCJwZXJzb25hXCI6XCJcIixcInRva2VuXCI6bnVsbCxcImRlZl90eXBlX2lkXCI6XCI5MzM4MjE2YjNjNTQ5Yjc1NjA3Y2Y1NDY2N2E0ZTY3ZDFmNjQ0ZDlmZWRcIixcImJ1c19vYl9pZFwiOlwiOTQ4N2QyOWU4ZDZmMDVlZGNiZGRkMTQzY2RiY2UxZjc2ZGJmNDAxNjkwXCIsXCJtb2R1bGVfY29kZVwiOlwiUkVTVEFQSVwiLFwibGljX3Byb2RfY29kZVwiOlwiQ1NEXCIsXCJsb2dnZWRfaW5fc2Vzc2lvblwiOlwib2dVY1pWb1NDYkJvRDV1K2xjQ1dxWEFlRCtrSXRGVHRcIixcInZpZXdfaWRcIjpcIlwiLFwic3BlY2lmaWNfY3VsdHVyZVwiOlwiXCIsXCJjdXJyZW50X2N1bHR1cmVcIjpcImVuLVVTXCIsXCJhbGxfY3VsdHVyZXNcIjpmYWxzZX0iLCJuYmYiOjE2NTgyMjQ4OTgsImV4cCI6MTY1ODMxMTI5OCwiaXNzIjoiaHR0cHM6Ly9jaGVyd2VsbC5jb20iLCJhdWQiOiI1MWM1MjQzNi01ZDc4LTRmZmMtODkzMS1jMzc3NjY5ZTk3OTUifQ.IrxbCbFs7s3K3arR43q8NyJJXtDKztZE_iWg1V1dQtM"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "",
+						"variables": ""
+					}
+				},
+				"url": "https://biomni.experiencecherwell.com/CherwellAPI/api/V1/getsearchitems/association/103193"
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": {
+			"token": "eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiQmlvbW5pYXBpIiwiY2xpZW50X2lkIjoiNTFjNTI0MzYtNWQ3OC00ZmZjLTg5MzEtYzM3NzY2OWU5Nzk1IiwiaWRlbnQiOiJ7XCJhcHBsaWNhdGlvbl90eXBlXCI6XCJCcm93c2VyQ2xpZW50XCIsXCJhdXRoZW50aWNhdGlvbl90eXBlXCI6XCJUcmVidWNoZXRcIixcInVzZXJfaWRcIjpcIkJpb21uaWFwaVwiLFwic2VjX2dycFwiOlwiOTQ4N2QyZWQwOTQyNzM4NmQ5ZGVlZTRiYTU5ZTliMTUyMWQ2ZWVjZDJlXCIsXCJwZXJzb25hXCI6XCJcIixcInRva2VuXCI6bnVsbCxcImRlZl90eXBlX2lkXCI6XCI5MzM4MjE2YjNjNTQ5Yjc1NjA3Y2Y1NDY2N2E0ZTY3ZDFmNjQ0ZDlmZWRcIixcImJ1c19vYl9pZFwiOlwiOTQ4N2QyOWU4ZDZmMDVlZGNiZGRkMTQzY2RiY2UxZjc2ZGJmNDAxNjkwXCIsXCJtb2R1bGVfY29kZVwiOlwiUkVTVEFQSVwiLFwibGljX3Byb2RfY29kZVwiOlwiQ1NEXCIsXCJsb2dnZWRfaW5fc2Vzc2lvblwiOlwib2dVY1pWb1NDYkJvRDV1K2xjQ1dxWEFlRCtrSXRGVHRcIixcInZpZXdfaWRcIjpcIlwiLFwic3BlY2lmaWNfY3VsdHVyZVwiOlwiXCIsXCJjdXJyZW50X2N1bHR1cmVcIjpcImVuLVVTXCIsXCJhbGxfY3VsdHVyZXNcIjpmYWxzZX0iLCJuYmYiOjE2NTgyMjQ4OTgsImV4cCI6MTY1ODMxMTI5OCwiaXNzIjoiaHR0cHM6Ly9jaGVyd2VsbC5jb20iLCJhdWQiOiI1MWM1MjQzNi01ZDc4LTRmZmMtODkzMS1jMzc3NjY5ZTk3OTUifQ.IrxbCbFs7s3K3arR43q8NyJJXtDKztZE_iWg1V1dQtM"
+		}
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "9ce72616-d4b4-451d-bab5-e52eea096ad3",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "66a4bf08-8ea2-469c-873e-c2c22ce1036c",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "https://biomni.experiencecherwell.com/",
+			"type": "string"
+		}
+	]
+}
