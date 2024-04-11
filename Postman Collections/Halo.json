@@ -1,0 +1,34 @@
+{
+	"info": {
+		"_postman_id": "893e6625-52b2-4d64-a391-24504cec3a06",
+		"name": "HaloITSM",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [],
+	"auth": {
+		"type": "apikey",
+		"apikey": {}
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "ec8e7fc7-b718-4bc0-8fc8-f79c69aff695",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "90a3c827-a596-4248-9ae9-c19edfac83f8",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
