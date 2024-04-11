@@ -1,0 +1,1916 @@
+{
+	"info": {
+		"_postman_id": "2dc3acd2-4a50-4ffb-b212-4053f4848787",
+		"name": "Matrix42",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "getAllOrders",
+			"id": "e836fded-b007-4118-be64-f4672f9d50b2",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true,
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{accesstoken}}"
+					}
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{Baseurl}}orders",
+					"host": [
+						"{{Baseurl}}orders"
+					],
+					"query": [
+						{
+							"key": "Authorization",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "enddate",
+							"value": "160623",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getUserInfo",
+			"id": "789de5a5-4636-4d87-ad79-c2c153266ed2",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{accessToken}}"
+					}
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": "{{Baseurl}}UserInfo"
+			},
+			"response": []
+		},
+		{
+			"name": "getTicketByNumber",
+			"id": "55adb920-df5f-46b6-be4a-ffafb144b55e",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{accesstoken}}"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Baseurl}}ticket/Search?TicketNumber=TCK00373",
+					"host": [
+						"{{Baseurl}}ticket"
+					],
+					"path": [
+						"Search"
+					],
+					"query": [
+						{
+							"key": "Subject",
+							"value": "software",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "TicketNumber",
+							"value": "TCK00373"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getaTicketByCurrentUser",
+			"id": "181bc07a-bd39-4152-afcb-a0c0aefe82dc",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{AccessToken}}"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Baseurl}}incident/search?MaxItemsCount=200&state=200&OnlyRelatedToCurrentUser=true",
+					"host": [
+						"{{Baseurl}}incident"
+					],
+					"path": [
+						"search"
+					],
+					"query": [
+						{
+							"key": "MaxItemsCount",
+							"value": "200"
+						},
+						{
+							"key": "Subject",
+							"value": "software",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "state",
+							"value": "200"
+						},
+						{
+							"key": "CurrentUserId",
+							"value": "42a3eced-73fa-4a79-a37e-945becbc24b0",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "OnlyRelatedToCurrentUser",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getIncidentFilters",
+			"id": "ac5957cd-b7ca-4a15-8851-bbf6196dfac9",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "9eN#Zh26",
+						"username": "vvalentine@imagoverum.com"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Baseurl}}incident/getfilters/4c9786e0-a30a-e511-80d8-0050562f9516",
+					"host": [
+						"{{Baseurl}}incident"
+					],
+					"path": [
+						"getfilters",
+						"4c9786e0-a30a-e511-80d8-0050562f9516"
+					],
+					"query": [
+						{
+							"key": "Subject",
+							"value": "software",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "CurrentUserId",
+							"value": "42a3eced-73fa-4a79-a37e-945becbc24b0",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getIncidentFullDetails (ActivityTypeIncident)",
+			"id": "c7d3991e-04ec-4389-ab2f-aab1a2a7c566",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "9eN#Zh26",
+						"username": "vvalentine@imagoverum.com"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Baseurl}}/data/objects/SPSActivityTypeIncident/fd575aa3-2422-ee11-d485-000d3a2468be?full=true",
+					"host": [
+						"{{Baseurl}}"
+					],
+					"path": [
+						"data",
+						"objects",
+						"SPSActivityTypeIncident",
+						"fd575aa3-2422-ee11-d485-000d3a2468be"
+					],
+					"query": [
+						{
+							"key": "Subject",
+							"value": "software",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "CurrentUserId",
+							"value": "42a3eced-73fa-4a79-a37e-945becbc24b0",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "full",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getTicketFullDetails(ActivityTypeTicket)",
+			"id": "d8a35b02-61ba-4c29-93e1-bf8adc600cbd",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "9eN#Zh26",
+						"username": "vvalentine@imagoverum.com"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Baseurl}}data/objects/SPSActivityTypeTicket/c9a409a9-0526-4002-a80b-ad2caade7ec6?full=true",
+					"host": [
+						"{{Baseurl}}data"
+					],
+					"path": [
+						"objects",
+						"SPSActivityTypeTicket",
+						"c9a409a9-0526-4002-a80b-ad2caade7ec6"
+					],
+					"query": [
+						{
+							"key": "Subject",
+							"value": "software",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "CurrentUserId",
+							"value": "42a3eced-73fa-4a79-a37e-945becbc24b0",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "full",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getFragments",
+			"id": "9d39f38c-cf71-4054-9eb8-d0c3190f79a5",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "9eN#Zh26",
+						"username": "vvalentine@imagoverum.com"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Baseurl}}data/fragments/SPSActivityClassBase",
+					"host": [
+						"{{Baseurl}}data"
+					],
+					"path": [
+						"fragments",
+						"SPSActivityClassBase"
+					],
+					"query": [
+						{
+							"key": "Subject",
+							"value": "software",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "CurrentUserId",
+							"value": "42a3eced-73fa-4a79-a37e-945becbc24b0",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "postIncidentComment",
+			"id": "a5559a7e-ed3f-4274-bc82-a1b7eb1c19c6",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "9eN#Zh26",
+						"username": "vvalentine@imagoverum.com"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"ObjectId\":\"2881971d-331f-ee11-d085-000d3a2468be\",\r\n\"Comment\": \"comment via API\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{Baseurl}}incident/addcomment",
+					"host": [
+						"{{Baseurl}}incident"
+					],
+					"path": [
+						"addcomment"
+					],
+					"query": [
+						{
+							"key": "Subject",
+							"value": "software",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getTicketByState",
+			"id": "9297e9df-6abc-4c65-9bc8-8720ca325cfc",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "9eN#Zh26",
+						"username": "vvalentine@imagoverum.com"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Baseurl}}ticket/Search?State=200",
+					"host": [
+						"{{Baseurl}}ticket"
+					],
+					"path": [
+						"Search"
+					],
+					"query": [
+						{
+							"key": "Subject",
+							"value": "software",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "TicketNumber",
+							"value": "INC00181",
+							"disabled": true
+						},
+						{
+							"key": "State",
+							"value": "200"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetIncidentsByState",
+			"id": "70ee8cd7-c495-4197-a8d6-9d3212bfc55f",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "9eN#Zh26",
+						"username": "vvalentine@imagoverum.com"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://twe025srv.imagoverum.com/m42Services/api/incident/search?state=200&full=true",
+					"protocol": "https",
+					"host": [
+						"twe025srv",
+						"imagoverum",
+						"com"
+					],
+					"path": [
+						"m42Services",
+						"api",
+						"incident",
+						"search"
+					],
+					"query": [
+						{
+							"key": "state",
+							"value": "200"
+						},
+						{
+							"key": "full",
+							"value": "true",
+							"type": "text"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getIncidentsByUser&State",
+			"id": "9e549d85-9cfa-4230-b3ae-967acd38c911",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "9eN#Zh26",
+						"username": "vvalentine@imagoverum.com"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": "https://twe025srv.imagoverum.com/m42Services/api/incident/UserIncidents/4c9786e0-a30a-e511-80d8-0050562f9516/204"
+			},
+			"response": []
+		},
+		{
+			"name": "getIncidentsByUser&State Copy",
+			"id": "f42f23c5-1539-42fb-b54e-98cfe82e2764",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "9eN#Zh26",
+						"username": "vvalentine@imagoverum.com"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": "https://twe025srv.imagoverum.com/m42Services/api/incident/UserIncidents/4c9786e0-a30a-e511-80d8-0050562f9516/204"
+			},
+			"response": []
+		},
+		{
+			"name": "POST incident/Close",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "3a93b3cf-856d-4077-879f-15b3cbfd8205",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"id": "0632863c-c7d3-4fd6-9cff-ae6beae1eddb",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "9eN#Zh26",
+						"username": "vvalentine@imagoverum.com"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\tObjectIds: [ 'e336ba41-5816-45a4-bb96-1d62c83d269e' ],\r\n\tCloseRelatedIncidents: true,\r\n\tRetireAnnouncement: true,\r\n\tAffectedAsset: '00000000-0000-0000-0000-000000000000',\r\n\tAffectedService: '00000000-0000-0000-0000-000000000000',\r\n\tCausedByTickets: [ '00000000-0000-0000-0000-000000000000' ],\r\n\tReason: 0,\r\n\tComments: 'This is to close the ticket',\r\n\tServicesAvailability: 0,\r\n\tAssetsAvailability: 0,\r\n\tSendMailToUsers: true,\r\n\tErrorType: 0,\r\n\tSendMailToInitiator: true,\r\n\tNotifyResponsible: true,\r\n\tActivityAction: 0,\r\n\tCategoryId: '00000000-0000-0000-0000-000000000000',\r\n\tKBArticle: '00000000-0000-0000-0000-000000000000',\r\n\tInformFurtherUsers: [ '00000000-0000-0000-0000-000000000000' ],\r\n\tSendMailToRelatedResponsibleUsers: true,\r\n\tSkipFailIfAlreadyClosed: true,\r\n\tClosureAttachmentFileIDs: [ '00000000-0000-0000-0000-000000000000' ],\r\n}"
+				},
+				"url": "{{Baseurl}}incident/Close"
+			},
+			"response": []
+		},
+		{
+			"name": "Token Exchange Copy",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "8cc841d8-c6d5-4884-a0cf-2d11bd2bc8e2",
+						"exec": [
+							"pm.collectionVariables.set(\"accesstoken\", JSON.parse(responseBody).RawToken)"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"id": "ac3405f4-9721-4ee9-9af5-a0498a90a5ae",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{Token}}"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"url": "{{Baseurl}}ApiToken/GenerateAccessTokenFromApiToken"
+			},
+			"response": []
+		},
+		{
+			"name": "getSPSActivityClassBase/",
+			"id": "9e791dba-e39d-442b-888b-3b1f06cb62ea",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{accesstoken}}"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Baseurl}}data/fragments/SPSActivityClassBase/",
+					"host": [
+						"{{Baseurl}}data"
+					],
+					"path": [
+						"fragments",
+						"SPSActivityClassBase",
+						""
+					],
+					"query": [
+						{
+							"key": "terms",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "postJournalEntry",
+			"id": "18702053-a831-46e8-950c-714f1c3a450c",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{accesstoken}}"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{Baseurl}}activity/addjournalentry?title=\"Self-help if a software does not start.\"&Id=a74685c3-b120-ee11-d285-000d3a2468be&terms[0]=software&terms[1]=repair&terms=software&channelId=\"kba\"",
+					"host": [
+						"{{Baseurl}}activity"
+					],
+					"path": [
+						"addjournalentry"
+					],
+					"query": [
+						{
+							"key": "lcid",
+							"value": "0",
+							"disabled": true
+						},
+						{
+							"key": "title",
+							"value": "\"Self-help if a software does not start.\""
+						},
+						{
+							"key": "Id",
+							"value": "a74685c3-b120-ee11-d285-000d3a2468be"
+						},
+						{
+							"key": "terms[0]",
+							"value": "software"
+						},
+						{
+							"key": "terms[1]",
+							"value": "repair"
+						},
+						{
+							"key": "terms",
+							"value": "software"
+						},
+						{
+							"key": "channelId",
+							"value": "\"kba\""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getJournalEntry",
+			"id": "44a100d3-bb83-4eb3-9433-3d6545f1b6a5",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{accesstoken}}"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Baseurl}}JournalPortal?objectId=a74685c3-b120-ee11-d285-000d3a2468be&start=0&count=10&objectLinkTemplate=2&timeOffset=0",
+					"host": [
+						"{{Baseurl}}JournalPortal"
+					],
+					"query": [
+						{
+							"key": "lcid",
+							"value": "0",
+							"disabled": true
+						},
+						{
+							"key": "title",
+							"value": "\"Self-help if a software does not start.\"",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "Id",
+							"value": "\"4c9786e0-a30a-e511-80d8-0050562f9516\"",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "terms[0]",
+							"value": "software",
+							"disabled": true
+						},
+						{
+							"key": "terms[1]",
+							"value": "repair",
+							"disabled": true
+						},
+						{
+							"key": "terms",
+							"value": "software",
+							"disabled": true
+						},
+						{
+							"key": "channelId",
+							"value": "\"kba\"",
+							"disabled": true
+						},
+						{
+							"key": "objectId",
+							"value": "a74685c3-b120-ee11-d285-000d3a2468be"
+						},
+						{
+							"key": "start",
+							"value": "0"
+						},
+						{
+							"key": "count",
+							"value": "10"
+						},
+						{
+							"key": "objectLinkTemplate",
+							"value": "2"
+						},
+						{
+							"key": "timeOffset",
+							"value": "0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getObjects",
+			"id": "c52d7af1-a4a7-4ce8-bec3-0cbeb7ae0d2b",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{accesstoken}}"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Baseurl}}data/objects",
+					"host": [
+						"{{Baseurl}}data"
+					],
+					"path": [
+						"objects"
+					],
+					"query": [
+						{
+							"key": "lcid",
+							"value": "0",
+							"disabled": true
+						},
+						{
+							"key": "title",
+							"value": "\"Self-help if a software does not start.\"",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "Id",
+							"value": "\"4c9786e0-a30a-e511-80d8-0050562f9516\"",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "terms[0]",
+							"value": "software",
+							"disabled": true
+						},
+						{
+							"key": "terms[1]",
+							"value": "repair",
+							"disabled": true
+						},
+						{
+							"key": "terms",
+							"value": "software",
+							"disabled": true
+						},
+						{
+							"key": "channelId",
+							"value": "\"kba\"",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getObjectTypeName",
+			"id": "1ab1de96-12b8-4d4a-b6e8-ab5f39ec2ee3",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{accesstoken}}"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Baseurl}}data/objecttypename/7bff5795-330c-ee11-c885-000d3a2468be",
+					"host": [
+						"{{Baseurl}}data"
+					],
+					"path": [
+						"objecttypename",
+						"7bff5795-330c-ee11-c885-000d3a2468be"
+					],
+					"query": [
+						{
+							"key": "lcid",
+							"value": "0",
+							"disabled": true
+						},
+						{
+							"key": "title",
+							"value": "\"Self-help if a software does not start.\"",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "Id",
+							"value": "\"4c9786e0-a30a-e511-80d8-0050562f9516\"",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "terms[0]",
+							"value": "software",
+							"disabled": true
+						},
+						{
+							"key": "terms[1]",
+							"value": "repair",
+							"disabled": true
+						},
+						{
+							"key": "terms",
+							"value": "software",
+							"disabled": true
+						},
+						{
+							"key": "channelId",
+							"value": "\"kba\"",
+							"disabled": true
+						},
+						{
+							"key": "objectId",
+							"value": "7bff5795-330c-ee11-c885-000d3a2468be",
+							"disabled": true
+						},
+						{
+							"key": "start",
+							"value": "0",
+							"disabled": true
+						},
+						{
+							"key": "count",
+							"value": "0",
+							"disabled": true
+						},
+						{
+							"key": "objectLinkTemplate",
+							"value": "string1",
+							"disabled": true
+						},
+						{
+							"key": "timeOffset",
+							"value": "0",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getHomeInfoOrderdetails",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "c2f5911d-5dc1-4519-a830-faf30f76e1bb",
+						"exec": [
+							"//pm.collectionVariables.set(\"accesstoken\", JSON.parse(responseBody).RawToken)"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"id": "58a8d4db-bc31-41ac-98f2-fbda78e57baf",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": {
+						"value": "{{AccessToken}}",
+						"in": "header",
+						"key": "Bearer"
+					}
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{accesstoken}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://twe025srv.imagoverum.com/m42Services/api/homeinfo/orders",
+					"protocol": "https",
+					"host": [
+						"twe025srv",
+						"imagoverum",
+						"com"
+					],
+					"path": [
+						"m42Services",
+						"api",
+						"homeinfo",
+						"orders"
+					],
+					"query": [
+						{
+							"key": "channelId",
+							"value": "knowledgebase",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getKBArticles",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "c2f5911d-5dc1-4519-a830-faf30f76e1bb",
+						"exec": [
+							"//pm.collectionVariables.set(\"accesstoken\", JSON.parse(responseBody).RawToken)"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"id": "bb0793b4-28a3-477a-bb6a-674c076d929e",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{accessToken}}"
+					}
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{accesstoken}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://twe025srv.imagoverum.com/m42Services/api/kbarticle?articleType=0",
+					"protocol": "https",
+					"host": [
+						"twe025srv",
+						"imagoverum",
+						"com"
+					],
+					"path": [
+						"m42Services",
+						"api",
+						"kbarticle"
+					],
+					"query": [
+						{
+							"key": "searchcondition",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "articleid",
+							"value": "{articleid}",
+							"disabled": true
+						},
+						{
+							"key": "articletype",
+							"value": "{articletype}",
+							"disabled": true
+						},
+						{
+							"key": "isexcludeoldarticles",
+							"value": "{isexcludeoldarticles}",
+							"disabled": true
+						},
+						{
+							"key": "channelId",
+							"value": "knowledgebase",
+							"disabled": true
+						},
+						{
+							"key": "searchCondition",
+							"value": "0",
+							"disabled": true
+						},
+						{
+							"key": "articleId",
+							"value": "kba00002",
+							"disabled": true
+						},
+						{
+							"key": "articleType",
+							"value": "0"
+						},
+						{
+							"key": "isExcludeOldArticles",
+							"value": "true",
+							"disabled": true
+						},
+						{
+							"key": "DisplayString",
+							"value": "software",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getKBArticlesbyText",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "c2f5911d-5dc1-4519-a830-faf30f76e1bb",
+						"exec": [
+							"//pm.collectionVariables.set(\"accesstoken\", JSON.parse(responseBody).RawToken)"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"id": "7e27ee16-bef8-4cb9-861f-29827ad530f3",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{accessToken}}"
+					}
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{accesstoken}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://twe025srv.imagoverum.com/m42Services/api/kbarticle/search?onlypublishedtossp=true&text=pc and visio",
+					"protocol": "https",
+					"host": [
+						"twe025srv",
+						"imagoverum",
+						"com"
+					],
+					"path": [
+						"m42Services",
+						"api",
+						"kbarticle",
+						"search"
+					],
+					"query": [
+						{
+							"key": "type",
+							"value": "{type}",
+							"disabled": true
+						},
+						{
+							"key": "typenotset",
+							"value": "{typenotset}",
+							"disabled": true
+						},
+						{
+							"key": "ticketnumber",
+							"value": "{ticketnumber}",
+							"disabled": true
+						},
+						{
+							"key": "subject",
+							"value": "PC is slow",
+							"disabled": true
+						},
+						{
+							"key": "categoryname",
+							"value": "{categoryname}",
+							"disabled": true
+						},
+						{
+							"key": "applicationname",
+							"value": "{applicationname}",
+							"disabled": true
+						},
+						{
+							"key": "state",
+							"value": "{state}",
+							"disabled": true
+						},
+						{
+							"key": "excludeoldversions",
+							"value": "{excludeoldversions}",
+							"disabled": true
+						},
+						{
+							"key": "onlypublishedtossp",
+							"value": "true"
+						},
+						{
+							"key": "operator",
+							"value": "{operator}",
+							"disabled": true
+						},
+						{
+							"key": "matchoptions",
+							"value": "visio",
+							"disabled": true
+						},
+						{
+							"key": "text",
+							"value": "pc and visio"
+						},
+						{
+							"key": "considerarchiveddata",
+							"value": "{considerarchiveddata}",
+							"disabled": true
+						},
+						{
+							"key": "maxitemscount",
+							"value": "{maxitemscount}",
+							"disabled": true
+						},
+						{
+							"key": "typeid",
+							"value": "{typeid}",
+							"disabled": true
+						},
+						{
+							"key": "searchcondition",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "articleid",
+							"value": "{articleid}",
+							"disabled": true
+						},
+						{
+							"key": "articletype",
+							"value": "{articletype}",
+							"disabled": true
+						},
+						{
+							"key": "isexcludeoldarticles",
+							"value": "{isexcludeoldarticles}",
+							"disabled": true
+						},
+						{
+							"key": "channelId",
+							"value": "knowledgebase",
+							"disabled": true
+						},
+						{
+							"key": "articleId",
+							"value": "kba00002",
+							"disabled": true
+						},
+						{
+							"key": "DisplayString",
+							"value": "software",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "keywords",
+							"value": "visio",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "postKBArticle",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "c2f5911d-5dc1-4519-a830-faf30f76e1bb",
+						"exec": [
+							"//pm.collectionVariables.set(\"accesstoken\", JSON.parse(responseBody).RawToken)"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"id": "a9f754e8-2f50-479a-9974-2abc6ceeb57a",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{accessToken}}"
+					}
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{accesstoken}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://twe025srv.imagoverum.com/m42Services/api/kbarticle/search?onlypublishedtossp=true&text=pc and visio",
+					"protocol": "https",
+					"host": [
+						"twe025srv",
+						"imagoverum",
+						"com"
+					],
+					"path": [
+						"m42Services",
+						"api",
+						"kbarticle",
+						"search"
+					],
+					"query": [
+						{
+							"key": "type",
+							"value": "{type}",
+							"disabled": true
+						},
+						{
+							"key": "typenotset",
+							"value": "{typenotset}",
+							"disabled": true
+						},
+						{
+							"key": "ticketnumber",
+							"value": "{ticketnumber}",
+							"disabled": true
+						},
+						{
+							"key": "subject",
+							"value": "PC is slow",
+							"disabled": true
+						},
+						{
+							"key": "categoryname",
+							"value": "{categoryname}",
+							"disabled": true
+						},
+						{
+							"key": "applicationname",
+							"value": "{applicationname}",
+							"disabled": true
+						},
+						{
+							"key": "state",
+							"value": "{state}",
+							"disabled": true
+						},
+						{
+							"key": "excludeoldversions",
+							"value": "{excludeoldversions}",
+							"disabled": true
+						},
+						{
+							"key": "onlypublishedtossp",
+							"value": "true"
+						},
+						{
+							"key": "operator",
+							"value": "{operator}",
+							"disabled": true
+						},
+						{
+							"key": "matchoptions",
+							"value": "visio",
+							"disabled": true
+						},
+						{
+							"key": "text",
+							"value": "pc and visio"
+						},
+						{
+							"key": "considerarchiveddata",
+							"value": "{considerarchiveddata}",
+							"disabled": true
+						},
+						{
+							"key": "maxitemscount",
+							"value": "{maxitemscount}",
+							"disabled": true
+						},
+						{
+							"key": "typeid",
+							"value": "{typeid}",
+							"disabled": true
+						},
+						{
+							"key": "searchcondition",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "articleid",
+							"value": "{articleid}",
+							"disabled": true
+						},
+						{
+							"key": "articletype",
+							"value": "{articletype}",
+							"disabled": true
+						},
+						{
+							"key": "isexcludeoldarticles",
+							"value": "{isexcludeoldarticles}",
+							"disabled": true
+						},
+						{
+							"key": "channelId",
+							"value": "knowledgebase",
+							"disabled": true
+						},
+						{
+							"key": "articleId",
+							"value": "kba00002",
+							"disabled": true
+						},
+						{
+							"key": "DisplayString",
+							"value": "software",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "keywords",
+							"value": "visio",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getKBArticlesbyKeywords",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "c2f5911d-5dc1-4519-a830-faf30f76e1bb",
+						"exec": [
+							"//pm.collectionVariables.set(\"accesstoken\", JSON.parse(responseBody).RawToken)"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"id": "7ca250c8-d866-4e47-976b-9ebf6c08828b",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{accessToken}}"
+					}
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{accesstoken}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://twe025srv.imagoverum.com/m42Services/api/kbarticle/search?keywords=visio",
+					"protocol": "https",
+					"host": [
+						"twe025srv",
+						"imagoverum",
+						"com"
+					],
+					"path": [
+						"m42Services",
+						"api",
+						"kbarticle",
+						"search"
+					],
+					"query": [
+						{
+							"key": "type",
+							"value": "{type}",
+							"disabled": true
+						},
+						{
+							"key": "typenotset",
+							"value": "{typenotset}",
+							"disabled": true
+						},
+						{
+							"key": "keywords",
+							"value": "visio"
+						},
+						{
+							"key": "ticketnumber",
+							"value": "{ticketnumber}",
+							"disabled": true
+						},
+						{
+							"key": "subject",
+							"value": "{subject}",
+							"disabled": true
+						},
+						{
+							"key": "categoryname",
+							"value": "{categoryname}",
+							"disabled": true
+						},
+						{
+							"key": "applicationname",
+							"value": "{applicationname}",
+							"disabled": true
+						},
+						{
+							"key": "state",
+							"value": "{state}",
+							"disabled": true
+						},
+						{
+							"key": "excludeoldversions",
+							"value": "{excludeoldversions}",
+							"disabled": true
+						},
+						{
+							"key": "onlypublishedtossp",
+							"value": "{onlypublishedtossp}",
+							"disabled": true
+						},
+						{
+							"key": "operator",
+							"value": "{operator}",
+							"disabled": true
+						},
+						{
+							"key": "matchoptions",
+							"value": "{matchoptions}",
+							"disabled": true
+						},
+						{
+							"key": "text",
+							"value": "{text}",
+							"disabled": true
+						},
+						{
+							"key": "considerarchiveddata",
+							"value": "{considerarchiveddata}",
+							"disabled": true
+						},
+						{
+							"key": "maxitemscount",
+							"value": "{maxitemscount}",
+							"disabled": true
+						},
+						{
+							"key": "typeid",
+							"value": "{typeid}",
+							"disabled": true
+						},
+						{
+							"key": "searchcondition",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "articleid",
+							"value": "{articleid}",
+							"disabled": true
+						},
+						{
+							"key": "articletype",
+							"value": "{articletype}",
+							"disabled": true
+						},
+						{
+							"key": "isexcludeoldarticles",
+							"value": "{isexcludeoldarticles}",
+							"disabled": true
+						},
+						{
+							"key": "channelId",
+							"value": "knowledgebase",
+							"disabled": true
+						},
+						{
+							"key": "articleId",
+							"value": "kba00002",
+							"disabled": true
+						},
+						{
+							"key": "DisplayString",
+							"value": "software",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getKBArticlesbyKeywords Copy",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "c2f5911d-5dc1-4519-a830-faf30f76e1bb",
+						"exec": [
+							"//pm.collectionVariables.set(\"accesstoken\", JSON.parse(responseBody).RawToken)"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"id": "06d153bf-d93a-4a35-acd0-0b7a4a539e11",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{accessToken}}"
+					}
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{accesstoken}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://twe025srv.imagoverum.com/m42Services/api/kbarticle/search?keywords=visio",
+					"protocol": "https",
+					"host": [
+						"twe025srv",
+						"imagoverum",
+						"com"
+					],
+					"path": [
+						"m42Services",
+						"api",
+						"kbarticle",
+						"search"
+					],
+					"query": [
+						{
+							"key": "type",
+							"value": "{type}",
+							"disabled": true
+						},
+						{
+							"key": "typenotset",
+							"value": "{typenotset}",
+							"disabled": true
+						},
+						{
+							"key": "keywords",
+							"value": "visio"
+						},
+						{
+							"key": "ticketnumber",
+							"value": "{ticketnumber}",
+							"disabled": true
+						},
+						{
+							"key": "subject",
+							"value": "{subject}",
+							"disabled": true
+						},
+						{
+							"key": "categoryname",
+							"value": "{categoryname}",
+							"disabled": true
+						},
+						{
+							"key": "applicationname",
+							"value": "{applicationname}",
+							"disabled": true
+						},
+						{
+							"key": "state",
+							"value": "{state}",
+							"disabled": true
+						},
+						{
+							"key": "excludeoldversions",
+							"value": "{excludeoldversions}",
+							"disabled": true
+						},
+						{
+							"key": "onlypublishedtossp",
+							"value": "{onlypublishedtossp}",
+							"disabled": true
+						},
+						{
+							"key": "operator",
+							"value": "{operator}",
+							"disabled": true
+						},
+						{
+							"key": "matchoptions",
+							"value": "{matchoptions}",
+							"disabled": true
+						},
+						{
+							"key": "text",
+							"value": "{text}",
+							"disabled": true
+						},
+						{
+							"key": "considerarchiveddata",
+							"value": "{considerarchiveddata}",
+							"disabled": true
+						},
+						{
+							"key": "maxitemscount",
+							"value": "{maxitemscount}",
+							"disabled": true
+						},
+						{
+							"key": "typeid",
+							"value": "{typeid}",
+							"disabled": true
+						},
+						{
+							"key": "searchcondition",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "articleid",
+							"value": "{articleid}",
+							"disabled": true
+						},
+						{
+							"key": "articletype",
+							"value": "{articletype}",
+							"disabled": true
+						},
+						{
+							"key": "isexcludeoldarticles",
+							"value": "{isexcludeoldarticles}",
+							"disabled": true
+						},
+						{
+							"key": "channelId",
+							"value": "knowledgebase",
+							"disabled": true
+						},
+						{
+							"key": "articleId",
+							"value": "kba00002",
+							"disabled": true
+						},
+						{
+							"key": "DisplayString",
+							"value": "software",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "postSignUpUser",
+			"id": "aed2e2be-a956-4db2-a018-d0743774c2c6",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1bmlxdWVfbmFtZSI6ImltYWdvdmVydW0uY29tXFx2dmFsZW50aW5lIiwibmFtZWlkIjoiaW1hZ292ZXJ1bS5jb21cXHZ2YWxlbnRpbmUiLCJVc2VyRnJhZ21lbnRJZCI6IjRjOTc4NmUwLWEzMGEtZTUxMS04MGQ4LTAwNTA1NjJmOTUxNiIsIlVzZXJPYmplY3RJZCI6ImU2MjJkMzEyLTU1MDMtNDhlMC05NDk5LTVhYjljMmJkYTYzMiIsIklzSW50ZXJuYWwiOiIwIiwiSXNNNDJVc2VyIjoiMCIsIkNvbXB1dGVyRnJhZyI6IjAwMDAwMDAwLTAwMDAtMDAwMC0wMDAwLTAwMDAwMDAwMDAwMCIsIkNvbXB1dGVyIjoiMDAwMDAwMDAtMDAwMC0wMDAwLTAwMDAtMDAwMDAwMDAwMDAwIiwiTG9jYXRpb25JRCI6ImJhNDQyNzYyLTNhMjktZTUxMS04MGVlLTAwNTA1NjJmOTUxNiIsIk9VSUQiOiI2ZGQ4MmVkNS0zOTI5LWU1MTEtODBlZS0wMDUwNTYyZjk1MTYiLCJSb2xlIjpbImJmODVkMDZhLWUwZmUtZTkxMS01MTgzLTAwMGQzYTI0ZjU4NiIsImJjNDUzNWE2LWUwZmUtZTkxMS01MTgzLTAwMGQzYTI0ZjU4NiIsImQxYmNhN2ZlLWEwNGItZWMxMS1iMjg0LTAwMGQzYWJmZjI5MyIsImM2ODVhYmE5LWE0MTktZTExMS1lYTlmLTAwMTE2NzU1OTExYSIsImRmMWZkMjQ1LTgzMTEtZTgxMS0wMTgxLTAwNTA1NmFmNjc4ZCIsImZjYmY5NTA4LTZhYTEtZTkxMS04ZDkwLTMwOWMyMzRiMDUxMCIsImE0ZWQ5ZDk0LWE4MjktNDdlNi04Y2ZhLTdlNDc0N2UyOTFmMSIsImE1ZDdiNjgyLWIyMTEtNGQ5NC1hOTZkLThjNTdlZWRhZmRlYSIsIjAxMGNkZTVjLTgxYWMtNDAzMi04MTY3LTliYTZmMTE0ZTFmZSIsImMyZGQ5MmMzLTgxY2MtNGQyZS04NmVlLWE2ZDBmODg1MzhiYyIsImViMDlkY2QzLTUwZDktNDMzYi05OTAyLWJlZWEzZjk2ODFjYSIsIjc4ZjU4YzM0LTMwYjgtZTkxMS05ZTk0LWYwNzk1OTYxNWFjNyIsIjYxNjdiY2RiLTlhN2QtNDczNi1iMjE1LTQyMThmYjY0MzYwZCJdLCJpc3MiOiJodHRwczovL3N0cy5tYXRyaXg0Mi5jb20iLCJhdWQiOiJ1cm46bWF0cml4NDJOZXdVWCIsImV4cCI6MTY5MDQxODA4NywibmJmIjoxNjkwMzYwNDg3fQ.slkmQJEUtqb5m6K1ykOlnDeaLJ8167GuNGv_kcJ8vxI"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n\r\n\r\n \r\n\r\n    \"SPSUserClassBase\": {\r\n\r\n        \"MailContentType\": 1,\r\n\r\n        \"DisplayName\": \"Carole McNally\",\r\n\r\n        \"MailAddress\": \"carole.mcnally@biomni.com\",\r\n\r\n        \"Photo\": \"/SPS/Images/Uploads/ContactPhotos/489786e0a30ae51180d80050562f9516/lucaslindon_avatar.png\",\r\n\r\n        \"MobilePhone\": \"07983215336\",\r\n        \"LastName\": \"McNally\",\r\n\r\n        \"FirstName\": \"Carole\"\r\n\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{Baseurl}}data/objects/SPSUserType/"
+			},
+			"response": []
+		},
+		{
+			"name": "postSignUpUser Copy",
+			"id": "f92a6040-f749-46f4-96b2-8a11918eafc9",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{accesstoken}}"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"Id\": \"1950ef4e-6b65-e811-82a7-000d3a24f586\",\r\n        \"MailAddress\": \"nicholas.dawson@o365.imagoverum.com\",\r\n        \"Manager\": null,\r\n        \"Location\": \"Hamburg\",\r\n        \"DisplayString\": \"Dawson, Nicholas\",\r\n        \"Expression-TypeCase\": \"46c86c68-42ae-4089-8398-6e4140fe8658\",\r\n        \"Expression-TypeID\": \"46c86c68-42ae-4089-8398-6e4140fe8658\"\r\n    },",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{Baseurl}}signUpUser"
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": {
+			"token": "{{Token}}"
+		}
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "0413f47b-f5d3-44fc-b600-91836de06126",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "a125baae-c0da-4788-9f77-e3504cd318ae",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "Baseurl",
+			"value": "https://twe025srv.imagoverum.com/m42Services/api/"
+		},
+		{
+			"key": "Token",
+			"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1bmlxdWVfbmFtZSI6ImltYWdvdmVydW0uY29tXFx2dmFsZW50aW5lIiwibmFtZWlkIjoiaW1hZ292ZXJ1bS5jb21cXHZ2YWxlbnRpbmUiLCJVc2VyRnJhZ21lbnRJZCI6IjRjOTc4NmUwLWEzMGEtZTUxMS04MGQ4LTAwNTA1NjJmOTUxNiIsImlzcyI6Imh0dHBzOi8vc3RzLm1hdHJpeDQyLmNvbSIsImF1ZCI6InVybjptYXRyaXg0MkFwaSIsImV4cCI6MjE0NzQ4MzYxMywibmJmIjoxNjg5MjMxODczfQ.vgqyBJP4Lv11bvB0nRUL2HN5LyGECCdR343ifKvS6tI",
+			"type": "string"
+		},
+		{
+			"key": "accesstoken",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "InitiatorID",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "accessToken",
+			"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1bmlxdWVfbmFtZSI6ImltYWdvdmVydW0uY29tXFx2dmFsZW50aW5lIiwibmFtZWlkIjoiaW1hZ292ZXJ1bS5jb21cXHZ2YWxlbnRpbmUiLCJVc2VyRnJhZ21lbnRJZCI6IjRjOTc4NmUwLWEzMGEtZTUxMS04MGQ4LTAwNTA1NjJmOTUxNiIsIlVzZXJPYmplY3RJZCI6ImU2MjJkMzEyLTU1MDMtNDhlMC05NDk5LTVhYjljMmJkYTYzMiIsIklzSW50ZXJuYWwiOiIwIiwiSXNNNDJVc2VyIjoiMCIsIkNvbXB1dGVyRnJhZyI6IjAwMDAwMDAwLTAwMDAtMDAwMC0wMDAwLTAwMDAwMDAwMDAwMCIsIkNvbXB1dGVyIjoiMDAwMDAwMDAtMDAwMC0wMDAwLTAwMDAtMDAwMDAwMDAwMDAwIiwiTG9jYXRpb25JRCI6ImJhNDQyNzYyLTNhMjktZTUxMS04MGVlLTAwNTA1NjJmOTUxNiIsIk9VSUQiOiI2ZGQ4MmVkNS0zOTI5LWU1MTEtODBlZS0wMDUwNTYyZjk1MTYiLCJSb2xlIjpbImJmODVkMDZhLWUwZmUtZTkxMS01MTgzLTAwMGQzYTI0ZjU4NiIsImJjNDUzNWE2LWUwZmUtZTkxMS01MTgzLTAwMGQzYTI0ZjU4NiIsImQxYmNhN2ZlLWEwNGItZWMxMS1iMjg0LTAwMGQzYWJmZjI5MyIsImM2ODVhYmE5LWE0MTktZTExMS1lYTlmLTAwMTE2NzU1OTExYSIsImRmMWZkMjQ1LTgzMTEtZTgxMS0wMTgxLTAwNTA1NmFmNjc4ZCIsImZjYmY5NTA4LTZhYTEtZTkxMS04ZDkwLTMwOWMyMzRiMDUxMCIsImE0ZWQ5ZDk0LWE4MjktNDdlNi04Y2ZhLTdlNDc0N2UyOTFmMSIsImE1ZDdiNjgyLWIyMTEtNGQ5NC1hOTZkLThjNTdlZWRhZmRlYSIsIjAxMGNkZTVjLTgxYWMtNDAzMi04MTY3LTliYTZmMTE0ZTFmZSIsImMyZGQ5MmMzLTgxY2MtNGQyZS04NmVlLWE2ZDBmODg1MzhiYyIsImViMDlkY2QzLTUwZDktNDMzYi05OTAyLWJlZWEzZjk2ODFjYSIsIjc4ZjU4YzM0LTMwYjgtZTkxMS05ZTk0LWYwNzk1OTYxNWFjNyIsIjYxNjdiY2RiLTlhN2QtNDczNi1iMjE1LTQyMThmYjY0MzYwZCJdLCJpc3MiOiJodHRwczovL3N0cy5tYXRyaXg0Mi5jb20iLCJhdWQiOiJ1cm46bWF0cml4NDJOZXdVWCIsImV4cCI6MTY4OTgxMDExMywibmJmIjoxNjg5NzUyNTEzfQ.iIAahl0QR_IUsiZ3OEdVb6IkY5snf5qi8LRMkNO8u_Y"
+		}
+	]
+}
